@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>React Fiber</title>
+    <title>Введение в типизированный JavaScript c FlowType</title>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,18 +16,13 @@
             width: 825px;
         }
 
-        .comment-text {
-            color: #f00;
-        }
-
         .big-list {
             font-size: 32px;
             line-height: 80px;
         }
 
-        video {
-            width: 100%;
-            margin-top: 100px;
+        h3 {
+            font-weight: bold;
         }
     </style>
     <script>
@@ -41,7 +36,7 @@
     </header>
     <section class="slide" id="cover">
 
-        <h2>Введение в статически типизированный JavaScript c FlowType</h2>
+        <h2>Введение в типизированный JavaScript c FlowType</h2>
 
         <img src="images/react-logo.png" />
         <style>
@@ -56,11 +51,7 @@
                 margin:120px 0 0;
                 color:black;
                 text-align:center;
-                font-size: 120px;
-            }
-
-            .performance img {
-                width: 100%;
+                font-size: 80px;
             }
         </style>
     </section>
@@ -106,15 +97,96 @@
         </style>
     </section>
 
-    <section class="slide" id="references">
-        <h2>References</h2>
+    <section class="slide">
+        <h2>План вебинара</h2>
         <ul>
-            <li><a href="https://flowtype.org">Flow docs</a></li>
+            <li>Зачем нужна статическая типизация в JavaScript.</li>
+            <li>Преимущества и недостатки статической типизации.</li>
+            <li>Как установить и подключить Flow.</li>
+            <li>Синтаксис типизированного JavaScript (Flow)</li>
+            <li>Как подготовить типизированный код для запуска в браузере.</li>
+        </ul>
+    </section>
+
+
+    <section class="slide">
+        <h2>Система типов в JavaScript</h2>
+        <h3> <b>type of x</b></h3>
+        <ul>
+            <li>number</li>
+            <li>function</li>
+            <li>boolean</li>
+            <li>object</li>
+            <li>string</li>
+            <li>symbol</li>
+            <li>undefined</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Ошибки, связанные с типами в JavaScript</h2>
+
+        <p>Вы пытаетесь использовать какую-то сущность в контексте, где она не работает</p>
+        <h3 class="next"> Ошибки времени выполения (runtime errors):<h3>
+        <ul class="next">
+            <li class="next"><b>*someVar*</b> is not a function</li>
+            <li class="next">cannot read property <b>*someVar*</b> of null/undefined</li>
+        </ul>
+    </section>
+
+    <section class="slide" >
+        <h2>Как получить больше ошибок, связанных с типами?</h2>
+        <ul>
+            <li>Линтеры</li>
+            <li>Рантайм проверки</li>
+            <li>Статическая проверка типов</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Линтеры (ESLint, JSHint etc.)</h2>
+        <ul>
+            <li>Знают, объявлена ли переменная или нет</li>
+        </ul>
+    </section>
+
+
+    <section class="slide">
+        <h2>Flow</h2>
+        <ul class="next">
+            <li class="next">Статический анализтор типов</li>
+            <li class="next">Разработка Facebook</li>
+            <li class="next">Windows версия появилась в середине 2016 г.</li>
+        </ul>
+    </section>
+
+    <section class="slide" >
+        <h2>Как подготовить типизированный код для запуска в браузере.</h2>
+        <ul>
+            <li>Comment syntax – не требуется компиляция</li>
+            <li>Babel: <b>transform-flow-strip-types</b> plugin</li>
+            <li>flow-remove-types</li>
+        </ul>
+    </section>
+
+    <section class="slide" >
+        <h2>Интеграция с существующими инструментами</h2>
+        <ul>
+            <li><b>ESLint:</b> eslint-plugin-flowtype-errors</li>
+            <li><b>Node.js:</b> flow-node</li>
+            <li><b>Webpack:</b> remove-flow-types-loader</li>
+        </ul>
+    </section>
+
+    <section class="slide" id="references">
+        <h2>Полезные ссылки</h2>
+        <ul>
+            <li><a href="https://flowtype.org">Документаци по Flow</a></li>
         </ul>
     </section>
 
     <section class="slide" id="thanks">
-        <h2 class="shout shrink">Thanks!</h2>
+        <h2 class="shout shrink">Спасибо!</h2>
     </section>
 
 
