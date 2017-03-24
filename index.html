@@ -63,7 +63,7 @@
             <div>
                 <h2>Alexey Zaslavsky</h2>
                 <div class="wrapper">
-                    Front-end developer at
+                    Front-end разработчик в
                     <img class="logo" src="images/wl.png" />
                 </div>
             </div>
@@ -108,6 +108,16 @@
         </ul>
     </section>
 
+    <section class="slide">
+        <h2>Преимущества и недостатки статической типизации</h2>
+        <ul>
+            <li> <b> + </b> Больше информации о вашем коде</li>
+            <li> <b> + </b> Предотвращение ошибок до запуска кода </li>
+            <li> <b> - </b> Дополнительный инструмент </li>
+            <li> <b> - </b> Больше времени на написание кода </li>
+        </ul>
+    </section>
+
 
     <section class="slide">
         <h2>Система типов в JavaScript</h2>
@@ -127,18 +137,22 @@
         <h2>Ошибки, связанные с типами в JavaScript</h2>
 
         <p>Вы пытаетесь использовать какую-то сущность в контексте, где она не работает</p>
-        <h3 class="next"> Ошибки времени выполения (runtime errors):<h3>
+        <h3 class="next"> Ошибки времени выполения (runtime errors):</h3>
         <ul class="next">
-            <li class="next"><b>*someVar*</b> is not a function</li>
+            <li class="next"><b>*someFunc*</b> is not a function</li>
             <li class="next">cannot read property <b>*someVar*</b> of null/undefined</li>
         </ul>
     </section>
 
     <section class="slide" >
-        <h2>Как получить больше ошибок, связанных с типами?</h2>
+        <h2>Runtime проверки</h2>
+    </section>
+
+    <section class="slide" >
+        <h2>Как узнать больше об ошибках, связанных с типами?</h2>
         <ul>
             <li>Линтеры</li>
-            <li>Рантайм проверки</li>
+            <li>Runtime проверки</li>
             <li>Статическая проверка типов</li>
         </ul>
     </section>
@@ -150,13 +164,39 @@
         </ul>
     </section>
 
-
     <section class="slide">
         <h2>Flow</h2>
         <ul class="next">
             <li class="next">Статический анализтор типов</li>
             <li class="next">Разработка Facebook</li>
             <li class="next">Windows версия появилась в середине 2016 г.</li>
+            <li class="next">Из коробки содержит декларации типов для стандартной библиотеки JavaScript, DOM API и стандартной библиотеки Node.js </li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Синтаксис</h2>
+        <ul class="next">
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Встроенные типы</h2>
+        <ul class="next">
+            <li class="next">number</li>
+            <li class="next">boolean</li>
+            <li class="next">string</li>
+            <li class="next">null</li>
+            <li class="next">void</li>
+            <li class="next">any</li>
+            <li class="next">mixed</li>
+            <li class="next">literal types</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Generic типы</h2>
+        <ul class="next">
         </ul>
     </section>
 
@@ -182,6 +222,7 @@
         <h2>Полезные ссылки</h2>
         <ul>
             <li><a href="https://flowtype.org">Документаци по Flow</a></li>
+            <li><a href="https://www.typescriptlang.org/">TypeScript</a></li>
         </ul>
     </section>
 
