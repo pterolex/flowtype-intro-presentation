@@ -16,6 +16,10 @@
             width: 825px;
         }
 
+        img {
+            width: 90%;
+        }
+
         .big-list {
             font-size: 32px;
             line-height: 80px;
@@ -35,23 +39,22 @@
         <h1>Static types with FlowType</h1>
     </header>
     <section class="slide" id="cover">
-
+        <img src="images/frontend-science.png" />
         <h2>Введение в типизированный JavaScript c FlowType</h2>
 
-        <img src="images/react-logo.png" />
         <style>
             #cover {
                 text-align: center;
             }
             #cover img {
-                width: 600px;
+                width: 200px;
             }
 
             #cover h2 {
-                margin:120px 0 0;
+                margin:110px 0 0;
                 color:black;
                 text-align:center;
-                font-size: 80px;
+                font-size: 70px;
             }
         </style>
     </section>
@@ -80,7 +83,7 @@
 
             #about .avatar {
                 border-radius: 50%;
-                width: 300px;
+                width: 200px;
             }
 
             #about .wrapper {
@@ -90,9 +93,9 @@
             }
 
             #about .logo {
-                width: 130px;
+                width: 200px;
                 display: inline;
-                margin-left: 30px;
+                margin-left: 20px;
             }
         </style>
     </section>
@@ -101,6 +104,7 @@
         <h2>План вебинара</h2>
         <ul>
             <li>Зачем нужна статическая типизация в JavaScript.</li>
+            <li>Проблемы с типами в JavaScript.</li>
             <li>Преимущества и недостатки статической типизации.</li>
             <li>Как установить и подключить Flow.</li>
             <li>Синтаксис типизированного JavaScript (Flow)</li>
@@ -109,15 +113,33 @@
     </section>
 
     <section class="slide">
+        <h2>Система типов</h2>
+        <p>
+             Совокупность правил в языках программирования, назначающих свойства, именуемые типами,
+             различным конструкциям, составляющим программу — таким как переменные, выражения,
+             функции или модули.
+        </p>
+    </section>
+
+    <section class="slide">
+        <h2>Проверка типов</h2>
+        <ul>
+            <li>статическая (на стадии компиляции)</li>
+            <li>динамическая (во время выполнения)</li>
+            <li>комбинация обоих видов</li>
+        </ul>
+    </section>
+
+    <section class="slide">
         <h2>Преимущества и недостатки статической типизации</h2>
         <ul>
             <li> <b> + </b> Больше информации о вашем коде</li>
             <li> <b> + </b> Предотвращение ошибок до запуска кода </li>
+            <li> <b> + </b> Упрощение рефакторинга </li>
             <li> <b> - </b> Дополнительный инструмент </li>
             <li> <b> - </b> Больше времени на написание кода </li>
         </ul>
     </section>
-
 
     <section class="slide">
         <h2>Система типов в JavaScript</h2>
@@ -138,14 +160,15 @@
 
         <p>Вы пытаетесь использовать какую-то сущность в контексте, где она не работает</p>
         <h3 class="next"> Ошибки времени выполения (runtime errors):</h3>
-        <ul class="next">
+        <ul>
             <li class="next"><b>*someFunc*</b> is not a function</li>
             <li class="next">cannot read property <b>*someVar*</b> of null/undefined</li>
         </ul>
     </section>
 
-    <section class="slide" >
-        <h2>Runtime проверки</h2>
+    <section class="slide">
+        <h2>Отсутствие ошибок</h2>
+        <img src="images/no-errors.png" />
     </section>
 
     <section class="slide" >
@@ -159,30 +182,54 @@
 
     <section class="slide">
         <h2>Линтеры (ESLint, JSHint etc.)</h2>
-        <ul>
-            <li>Знают, объявлена ли переменная или нет</li>
-        </ul>
+        <img src="images/eslint.png" />
+    </section>
+
+    <section class="slide">
+        <h2>Runtime проверки</h2>
+        <img src="images/dynamic-args.png" />
+    </section>
+
+    <section class="slide">
+        <h2>Runtime проверки</h2>
+        <img src="images/dynamic-args-2.png" />
+    </section>
+
+    <section class="slide">
+        <h2>Runtime проверки</h2>
+        <img src="images/dynamic-check-3.png" />
     </section>
 
     <section class="slide">
         <h2>Flow</h2>
-        <ul class="next">
-            <li class="next">Статический анализтор типов</li>
-            <li class="next">Разработка Facebook</li>
-            <li class="next">Windows версия появилась в середине 2016 г.</li>
+        <ul>
+            <li class="next">Статический анализатор типов</li>
+            <li class="next">Поддерживает современный стандарт ECMAScript 2017</li>
+            <li class="next">Разработка Facebook, написан на языке OCaml</li>
+            <li class="next">Windows версия появилась в середине 2016 г. (только х64)</li>
             <li class="next">Из коробки содержит декларации типов для стандартной библиотеки JavaScript, DOM API и стандартной библиотеки Node.js </li>
         </ul>
     </section>
 
     <section class="slide">
+        <h2>Установка и настройка</h2>
+        <ul>
+            <li class="next">npm install flow-bin --save-dev</li>
+            <li class="next">создание .flowconfig</li>
+        </ul>
+    </section>
+
+    <section class="slide">
         <h2>Синтаксис</h2>
-        <ul class="next">
+        <ul>
+            <li class="next">Расширение языка JavaScript (надмножество)</li>
+            <li class="next">Не поддерживается браузерами</li>
         </ul>
     </section>
 
     <section class="slide">
         <h2>Встроенные типы</h2>
-        <ul class="next">
+        <ul>
             <li class="next">number</li>
             <li class="next">boolean</li>
             <li class="next">string</li>
@@ -195,8 +242,10 @@
     </section>
 
     <section class="slide">
-        <h2>Generic типы</h2>
-        <ul class="next">
+        <h2>Модули</h2>
+        <ul>
+            <li class="next">ECMAScript modules</li>
+            <li class="next">CommonJS</li>
         </ul>
     </section>
 
@@ -213,8 +262,8 @@
         <h2>Интеграция с существующими инструментами</h2>
         <ul>
             <li><b>ESLint:</b> eslint-plugin-flowtype-errors</li>
-            <li><b>Node.js:</b> flow-node</li>
             <li><b>Webpack:</b> remove-flow-types-loader</li>
+            <li><b>Node.js:</b> flow-node / require hook</li>
         </ul>
     </section>
 
@@ -227,7 +276,7 @@
     </section>
 
     <section class="slide" id="thanks">
-        <h2 class="shout shrink">Спасибо!</h2>
+        <h2 class="shout shrink">Спасибо за внимание!</h2>
     </section>
 
 
